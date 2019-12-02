@@ -1,0 +1,12 @@
+''from dplython import (DplyFrame, X, diamonds, select, sift, sample_n,
+     sample_frac, head, arrange, mutate, group_by, summarize, DelayFunction) ''
+
+ from dfply import *
+ import pandas as pd
+
+ households = pd.read_csv('hh_main.RDS')
+ individuals = pd.read_csv('individuals.RDS')
+ deaths = pd.read_csv('deaths.RDS')
+ left = pd.read_csv('left_df.RDS')
+ utilities = pd.read_csv('resources_df.RDS')
+
