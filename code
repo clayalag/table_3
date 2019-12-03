@@ -1,13 +1,22 @@
 ''from dplython import (DplyFrame, X, diamonds, select, sift, sample_n,
     sample_frac, head, arrange, mutate, group_by, summarize, DelayFunction) ''
     
+import sys
+!{sys.executable} -m pip install pyreadr
+
 from dfply import *
 import pandas as pd
+import pyreadr
 
-households = pd.read_csv('hh_main.RDS')
-individuals = pd.read_csv('individuals.RDS')
-deaths = pd.read_csv('deaths.RDS')
-left = pd.read_csv('left_df.RDS')
-utilities = pd.read_csv('resources_df.RDS')
+households = pyreadr.read_r('hh_main.RDS')
+individuals = pyreadr.read_r('individuals.RDS')
+deaths = pyreadr.read_r('deaths.RDS')
+left = pyreadr.read_r('left_df.RDS')
+utilities = pyreadr.read_r('resources_df.RDS')
 
-
+"
+final_result = original_data -->
+                transformation_1(*args, **kwargs) -->
+                transformation_2(*args, **kwargs) -->
+                transformation_3(*args, **kwargs) -->
+"
